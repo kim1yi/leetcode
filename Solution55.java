@@ -14,9 +14,13 @@ public class Solution55 {
 
     public boolean myCanJump(int[] nums) {
         int size = nums.length;
+        //记录最远能到达的位置
         int maxLocation = 0;
         for (int i = 0; i < size; i++) {
-            if (maxLocation < i) return false;
+            //说明这格已经走不到了
+            if (maxLocation < i) {
+                return false;
+            }
             maxLocation = Math.max(maxLocation, i+nums[i]);
         }
         return true;
