@@ -1,3 +1,6 @@
+/**
+ * @author k1myi
+ */
 public class Solution55 {
     public boolean canJump(int[] nums) {
         int size = nums.length;

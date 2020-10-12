@@ -1,7 +1,11 @@
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-//包可见
+/**
+ * This is a ListNode
+ * @param : val
+ * @param : next
+ */
 class ListNode {
         int val;
         ListNode next;
@@ -10,6 +14,9 @@ class ListNode {
         ListNode(final int val, final ListNode next) { this.val = val; this.next = next; }
 }
 
+/**
+ * @author k1myi
+ */
 public class Solution23 {
     public ListNode mergeKLists(final ListNode[] lists) {
         
@@ -36,8 +43,9 @@ public class Solution23 {
 
         for(final ListNode node : lists) {
             //这个判断很重要，null对象也会改变lists的length大小
-            if (node != null)
+            if (node != null) {
                 pq.add(node);
+            }
         }
 
         //总是会遇到这样一个问题，直接在原链表上进行修改的时候总是不知道该怎么处理入口

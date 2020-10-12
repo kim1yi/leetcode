@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author k1myi
+ */
 public class Solution60 {
 
     private boolean[] serial;
@@ -52,8 +55,9 @@ public class Solution60 {
         builder.append(position);
         serial[position] = true;
         for (int i = n; i >= 1; i--) {
-            if (!serial[i])
+            if (!serial[i]) {
                 builder.append(i);
+            }
         }
         return builder.toString();
     }
