@@ -17,7 +17,7 @@ public class Solution23 {
         if (size == 0 || lists[0] == null)
             return null;
 
-        //Comparator的写法，利用lambdma
+        //Comparator的写法，利用lambda简化
         Comparator<ListNode> comparator = (o1, o2)->{return o1.val - o2.val;};
         final PriorityQueue<ListNode> pq = new PriorityQueue<>(size, comparator);
 

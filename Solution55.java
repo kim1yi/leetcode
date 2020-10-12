@@ -21,6 +21,7 @@ public class Solution55 {
             if (maxLocation < i) {
                 return false;
             }
+            //每次都要更新当前能到达的最远格子
             maxLocation = Math.max(maxLocation, i+nums[i]);
         }
         return true;
